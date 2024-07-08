@@ -68,7 +68,6 @@ CREATE TABLE orders (
 Buat file .env di root directory proyek ini dan isi dengan konfigurasi berikut:
 
 ```bash
-env
 DB_HOST=localhost
 DB_USER=root
 DB_PASSWORD=yourpassword
