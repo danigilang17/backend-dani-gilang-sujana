@@ -1,29 +1,41 @@
-**Marketplace API (Backend-Testing)**
+# Marketplace API (Backend-Testing)
+
 API untuk marketplace merah kuning hijau, di mana merchant dapat membuat dan memposting produk, dan customer dapat membeli produk serta mendapatkan bebas ongkir dan diskon sesuai dengan kriteria yang ditentukan.
 
-**Fitur**
-Merchant dapat membuat, memperbarui, dan menghapus produk.
-Customer dapat melihat daftar produk dan melakukan pembelian.
-Bebas ongkir untuk transaksi di atas Rp 15.000.
-Diskon 10% untuk transaksi di atas Rp 50.000.
-Menggunakan JWT untuk otentikasi.
-Dokumentasi API menggunakan Swagger.
+## Fitur
 
-**Persyaratan**
-Node.js
-MySQL
+- Merchant dapat membuat, memperbarui, dan menghapus produk.
+- Customer dapat melihat daftar produk dan melakukan pembelian.
+- Bebas ongkir untuk transaksi di atas Rp 15.000.
+- Diskon 10% untuk transaksi di atas Rp 50.000.
+- Menggunakan JWT untuk otentikasi.
+- Dokumentasi API menggunakan Swagger.
 
-**Instalasi**
-**1. Clone repositori ini**
+## Persyaratan
+
+- Node.js
+- MySQL
+
+## Instalasi
+
+### 1. Clone repositori ini
+
+```bash
 git clone https://github.com/danigilang17/backend-dani-gilang-sujana.git
 cd marketplace-api
-**2. Instal dependensi**
+```
+
+## 2. Instal dependensi
+```bash
 npm install
-**3. Konfigurasi database**
+```
+
+## 3. Konfigurasi database
 Buat database MySQL dan impor tabel-tabel yang diperlukan. Berikut adalah contoh skrip SQL untuk membuat database dan tabel:
 
-**sql**
+```bash
 CREATE DATABASE marketplace;
+
 USE marketplace;
 
 CREATE TABLE users (
@@ -51,9 +63,11 @@ CREATE TABLE orders (
     FOREIGN KEY (user_id) REFERENCES users(id),
     FOREIGN KEY (product_id) REFERENCES products(id)
 );
-4. Konfigurasi file environment
+```
+## 4. Konfigurasi file environment
 Buat file .env di root directory proyek ini dan isi dengan konfigurasi berikut:
 
+```bash
 env
 DB_HOST=localhost
 DB_USER=root
@@ -61,30 +75,33 @@ DB_PASSWORD=yourpassword
 DB_NAME=marketplace
 JWT_SECRET=your_jwt_secret
 PORT=3000
+```
 
-**5. Jalankan aplikasi**
+## 5. Jalankan aplikasi**
+```bash
 node app.js
-Aplikasi sekarang berjalan di http://localhost:3000.
+```
+Aplikasi sekarang berjalan di http://localhost:3000
 
-**Dokumentasi API**
-Dokumentasi API dapat diakses melalui Swagger di http://localhost:3000/api-docs.
+## Dokumentasi API
+Dokumentasi API dapat diakses melalui Swagger di http://localhost:3000/api-docs
 
-**Endpoints**
-Auth
-POST /auth/register - Register user baru
-POST /auth/login - Login user
+## Endpoints
+### Auth
+- POST /auth/register - Register user baru
+- POST /auth/login - Login user
 
-Customer
-GET /customer/products - Lihat daftar produk
-POST /customer/purchase - Membeli produk
+### Customer
+- GET /customer/products - Lihat daftar produk
+- POST /customer/purchase - Membeli produk
 
-Merchant
-POST /merchant/products - Membuat produk baru
-GET /merchant/products - Lihat daftar produk
-DELETE /merchant/products/:id - Menghapus produk
+## Merchant
+- POST /merchant/products - Membuat produk baru
+- GET /merchant/products - Lihat daftar produk
+- DELETE /merchant/products/:id - Menghapus produk
 
-**Kontribusi**
+## Kontribusi
 Silakan buat pull request atau membuka issue untuk memberikan saran atau melaporkan bug.
 
-**Lisensi**
+## Lisensi
 Proyek ini dilisensikan di bawah MIT License.
