@@ -22,7 +22,7 @@ API untuk marketplace merah kuning hijau, di mana merchant dapat membuat dan mem
 
 ```bash
 git clone https://github.com/danigilang17/backend-dani-gilang-sujana.git
-cd marketplace-api
+cd backend-dani-gilang-sujana
 ```
 
 ## 2. Instal dependensi
