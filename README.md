@@ -23,9 +23,7 @@ npm install
 Buat database MySQL dan impor tabel-tabel yang diperlukan. Berikut adalah contoh skrip SQL untuk membuat database dan tabel:
 
 **sql**
-
 CREATE DATABASE marketplace;
-
 USE marketplace;
 
 CREATE TABLE users (
